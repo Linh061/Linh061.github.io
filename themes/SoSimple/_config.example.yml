@@ -1,0 +1,45 @@
+# Blog config
+keywords: Blog,Article
+author: Your Name
+description: A So Simple Blog
+defaultTheme: light
+favicon: /images/logo.png
+
+# Nav menu
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+  Links: /links
+  Search: /search
+  Dark/Light Mode: javascript:SoSimple.darkLightToggle()
+
+toc_max_depth: 6
+
+footer:
+  text:
+  html:
+  enable_powered_by: true
+
+style:
+  post_excerpt:
+    summary_mode: false # if true, use `summary` of your post meta to generate summary
+  post_meta:
+    date_format: 'YYYY-MM-DD'
+    show_icon: true
+  fonts: # 前面写字体名，后面写对应 CSS 的链接
+    {
+      "'Noto Serif', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR'": 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif+TC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap',
+    }
+
+comment:
+  enable: # gitalk
+  gitalk:
+    clientID: string
+    clientSecret: string
+    repo: string,
+    owner: string,
+    admin:
+      - string[],
+    distractionFreeMode: false
