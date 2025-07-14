@@ -106,13 +106,10 @@ deploy:
   branch: main
 
 backup:
-  type: git
-  # 方案1：使用完整 SSH 地址（最推荐，避免别名问题）
-  repo: git@github.com:Linh061/Linh061.github.io.git  
-  # 方案2：使用本地已存在的远程别名（需确保 `git remote -v` 中有该别名）
-  # repo: origin  # 仅当 `git remote -v` 显示 origin 指向你的仓库时使用
-  branch: source  # 确保当前分支是 source 且已推送到远程
-  message: "Backup: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+    type: git
+    repository:
+       github: git@github.com:Linh061/Linh061.github.io.git,source
+       gitcafe: git@github.com:Linh061/Linh061.github.io.git,source
 
 
 
